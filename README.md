@@ -1,4 +1,5 @@
 # RasterTile
+
 The RasterTile project is a core project in the Terrafly System to process and provide raster imagery (including satellite images and aerial photographs).
 
 This project is created for two purposes. First is to convert satellite/aerial imageries from various sources/formats/projections to a uniform format and projection, and store them in a special designed local imagery database. The second purpose is to provide a .NET based web service that can read data from the internal database, and serve these data in the form of web API.
@@ -20,3 +21,7 @@ The project is comprised of four sub-projects: a core library written with C++, 
 * TileImageryReader
     * A .NET based web service that can read data from the database and serve them as web API.
 
+
+## How to build the project
+
+Please refer to doc/build_and_deploy.md
