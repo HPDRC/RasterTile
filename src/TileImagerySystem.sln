@@ -1,0 +1,205 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E66F499D-41D7-4331-A798-1EDD3DDA8A63}"
+	ProjectSection(SolutionItems) = preProject
+		tiff\libtiff.def = tiff\libtiff.def
+		Local.testsettings = Local.testsettings
+		tiff\mkg3states.c = tiff\mkg3states.c
+		Readme.txt = Readme.txt
+		tiff\t4.h = tiff\t4.h
+		tiff\tif_acorn.c = tiff\tif_acorn.c
+		tiff\tif_apple.c = tiff\tif_apple.c
+		tiff\tif_atari.c = tiff\tif_atari.c
+		tiff\tif_aux.c = tiff\tif_aux.c
+		tiff\tif_close.c = tiff\tif_close.c
+		tiff\tif_codec.c = tiff\tif_codec.c
+		tiff\tif_color.c = tiff\tif_color.c
+		tiff\tif_compress.c = tiff\tif_compress.c
+		tiff\tif_config.h = tiff\tif_config.h
+		tiff\tif_config.wince.h = tiff\tif_config.wince.h
+		tiff\tif_dir.c = tiff\tif_dir.c
+		tiff\tif_dir.h = tiff\tif_dir.h
+		tiff\tif_dirinfo.c = tiff\tif_dirinfo.c
+		tiff\tif_dirread.c = tiff\tif_dirread.c
+		tiff\tif_dirwrite.c = tiff\tif_dirwrite.c
+		tiff\tif_dumpmode.c = tiff\tif_dumpmode.c
+		tiff\tif_error.c = tiff\tif_error.c
+		tiff\tif_extension.c = tiff\tif_extension.c
+		tiff\tif_fax3.c = tiff\tif_fax3.c
+		tiff\tif_fax3.h = tiff\tif_fax3.h
+		tiff\tif_fax3sm.c = tiff\tif_fax3sm.c
+		tiff\tif_flush.c = tiff\tif_flush.c
+		tiff\tif_getimage.c = tiff\tif_getimage.c
+		tiff\tif_jbig.c = tiff\tif_jbig.c
+		tiff\tif_jpeg.c = tiff\tif_jpeg.c
+		tiff\tif_luv.c = tiff\tif_luv.c
+		tiff\tif_lzw.c = tiff\tif_lzw.c
+		tiff\tif_msdos.c = tiff\tif_msdos.c
+		tiff\tif_next.c = tiff\tif_next.c
+		tiff\tif_ojpeg.c = tiff\tif_ojpeg.c
+		tiff\tif_open.c = tiff\tif_open.c
+		tiff\tif_packbits.c = tiff\tif_packbits.c
+		tiff\tif_pixarlog.c = tiff\tif_pixarlog.c
+		tiff\tif_predict.c = tiff\tif_predict.c
+		tiff\tif_predict.h = tiff\tif_predict.h
+		tiff\tif_print.c = tiff\tif_print.c
+		tiff\tif_read.c = tiff\tif_read.c
+		tiff\tif_stream.cxx = tiff\tif_stream.cxx
+		tiff\tif_strip.c = tiff\tif_strip.c
+		tiff\tif_swab.c = tiff\tif_swab.c
+		tiff\tif_thunder.c = tiff\tif_thunder.c
+		tiff\tif_tile.c = tiff\tif_tile.c
+		tiff\tif_unix.c = tiff\tif_unix.c
+		tiff\tif_version.c = tiff\tif_version.c
+		tiff\tif_warning.c = tiff\tif_warning.c
+		tiff\tif_win3.c = tiff\tif_win3.c
+		tiff\tif_win32.c = tiff\tif_win32.c
+		tiff\tif_write.c = tiff\tif_write.c
+		tiff\tif_zip.c = tiff\tif_zip.c
+		tiff\Tiff.dsp = tiff\Tiff.dsp
+		tiff\Tiff.dsw = tiff\Tiff.dsw
+		tiff\tiff.h = tiff\tiff.h
+		tiff\Tiff.vcproj = tiff\Tiff.vcproj
+		tiff\tiff.vcxproj = tiff\tiff.vcxproj
+		tiff\Tiff.vcxproj.filters = tiff\Tiff.vcxproj.filters
+		tiff\tiff_wince.sln = tiff\tiff_wince.sln
+		tiff\tiff_wince.vcproj = tiff\tiff_wince.vcproj
+		tiff\tiffconf.h = tiff\tiffconf.h
+		tiff\tiffconf.wince.h = tiff\tiffconf.wince.h
+		tiff\tiffio.h = tiff\tiffio.h
+		tiff\tiffio.hxx = tiff\tiffio.hxx
+		tiff\tiffiop.h = tiff\tiffiop.h
+		tiff\tiffvers.h = tiff\tiffvers.h
+		TileImagerySystem.vsmdi = TileImagerySystem.vsmdi
+		tiff\uvcode.h = tiff\uvcode.h
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TileImageryReader", "TileImageryReader\TileImageryReader.csproj", "{F5EB6191-4255-4E89-8D4F-822461D3F62C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libtiff", "libtiff\libtiff.vcxproj", "{ED95CE20-400F-4EE7-AE70-ED1DB1141D71}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LibGeoTiff", "LibGeoTiff\LibGeoTiff.vcxproj", "{69120EEE-71BC-4F9B-9CD5-E3579A7A34DC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Proj4", "Proj4\Proj4.vcxproj", "{3267F273-CBE6-407C-BC0C-69E8E0AF7705}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TileImageryLoader", "TileImageryLoader\TileImageryLoader.csproj", "{78983225-EADC-4134-AFAF-8D55A047D829}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TileImageryTest", "TileImageryTest\TileImageryTest.vcxproj", "{BD9B50E2-C2A2-415E-B747-3440B4DA5E90}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TileImagerySystem", "TileImagerySystem\TileImagerySystem.vcxproj", "{1C3973BC-2A8A-43DF-81AC-B66FEB427F41}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cximage", "CxImage\cximage.vcxproj", "{C739151F-5384-41DF-A1A6-F089E2C1AD56}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jpeg", "jpeg\jpeg.vcxproj", "{818753F2-DBB9-4D3B-898A-A604309BE470}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "zlib\zlib.vcxproj", "{7B53D2C7-1B4A-4A53-A7D3-E25B92470B81}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TileImagerySystem_CLR", "TileImagerySystem_CLR\TileImagerySystem_CLR.vcxproj", "{05A3FDE7-4DBE-49CA-9390-CBFC702FF32B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "png", "png\png.vcxproj", "{430FF7BE-6283-4EB9-8EFB-D50C1AF0DF44}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 13
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs.cs.fiu.edu:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = TileImageryReader\\TileImageryReader.csproj
+		SccProjectName1 = TileImageryReader
+		SccLocalPath1 = TileImageryReader
+		SccProjectUniqueName2 = libtiff\\libtiff.vcxproj
+		SccProjectName2 = libtiff
+		SccLocalPath2 = libtiff
+		SccProjectUniqueName3 = LibGeoTiff\\LibGeoTiff.vcxproj
+		SccProjectName3 = LibGeoTiff
+		SccLocalPath3 = LibGeoTiff
+		SccProjectUniqueName4 = Proj4\\Proj4.vcxproj
+		SccProjectName4 = Proj4
+		SccLocalPath4 = Proj4
+		SccProjectUniqueName5 = TileImageryLoader\\TileImageryLoader.csproj
+		SccProjectName5 = TileImageryLoader
+		SccLocalPath5 = TileImageryLoader
+		SccProjectUniqueName6 = TileImageryTest\\TileImageryTest.vcxproj
+		SccProjectName6 = TileImageryTest
+		SccLocalPath6 = TileImageryTest
+		SccProjectUniqueName7 = TileImagerySystem\\TileImagerySystem.vcxproj
+		SccProjectName7 = TileImagerySystem
+		SccLocalPath7 = TileImagerySystem
+		SccProjectUniqueName8 = CxImage\\cximage.vcxproj
+		SccProjectName8 = CxImage
+		SccLocalPath8 = CxImage
+		SccProjectUniqueName9 = jpeg\\jpeg.vcxproj
+		SccProjectName9 = jpeg
+		SccLocalPath9 = jpeg
+		SccProjectUniqueName10 = zlib\\zlib.vcxproj
+		SccProjectName10 = zlib
+		SccLocalPath10 = zlib
+		SccProjectUniqueName11 = TileImagerySystem_CLR\\TileImagerySystem_CLR.vcxproj
+		SccProjectName11 = TileImagerySystem_CLR
+		SccLocalPath11 = TileImagerySystem_CLR
+		SccProjectUniqueName12 = png\\png.vcxproj
+		SccProjectName12 = png
+		SccLocalPath12 = png
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = TileImagerySystem.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5EB6191-4255-4E89-8D4F-822461D3F62C}.Debug|x64.ActiveCfg = Debug|x64
+		{F5EB6191-4255-4E89-8D4F-822461D3F62C}.Debug|x64.Build.0 = Debug|x64
+		{F5EB6191-4255-4E89-8D4F-822461D3F62C}.Release|x64.ActiveCfg = Release|x64
+		{F5EB6191-4255-4E89-8D4F-822461D3F62C}.Release|x64.Build.0 = Release|x64
+		{ED95CE20-400F-4EE7-AE70-ED1DB1141D71}.Debug|x64.ActiveCfg = Debug|x64
+		{ED95CE20-400F-4EE7-AE70-ED1DB1141D71}.Debug|x64.Build.0 = Debug|x64
+		{ED95CE20-400F-4EE7-AE70-ED1DB1141D71}.Release|x64.ActiveCfg = Release|x64
+		{ED95CE20-400F-4EE7-AE70-ED1DB1141D71}.Release|x64.Build.0 = Release|x64
+		{69120EEE-71BC-4F9B-9CD5-E3579A7A34DC}.Debug|x64.ActiveCfg = Debug|x64
+		{69120EEE-71BC-4F9B-9CD5-E3579A7A34DC}.Debug|x64.Build.0 = Debug|x64
+		{69120EEE-71BC-4F9B-9CD5-E3579A7A34DC}.Release|x64.ActiveCfg = Release|x64
+		{69120EEE-71BC-4F9B-9CD5-E3579A7A34DC}.Release|x64.Build.0 = Release|x64
+		{3267F273-CBE6-407C-BC0C-69E8E0AF7705}.Debug|x64.ActiveCfg = Debug|x64
+		{3267F273-CBE6-407C-BC0C-69E8E0AF7705}.Debug|x64.Build.0 = Debug|x64
+		{3267F273-CBE6-407C-BC0C-69E8E0AF7705}.Release|x64.ActiveCfg = Release|x64
+		{3267F273-CBE6-407C-BC0C-69E8E0AF7705}.Release|x64.Build.0 = Release|x64
+		{78983225-EADC-4134-AFAF-8D55A047D829}.Debug|x64.ActiveCfg = Debug|x64
+		{78983225-EADC-4134-AFAF-8D55A047D829}.Debug|x64.Build.0 = Debug|x64
+		{78983225-EADC-4134-AFAF-8D55A047D829}.Release|x64.ActiveCfg = Release|x64
+		{78983225-EADC-4134-AFAF-8D55A047D829}.Release|x64.Build.0 = Release|x64
+		{BD9B50E2-C2A2-415E-B747-3440B4DA5E90}.Debug|x64.ActiveCfg = Debug|x64
+		{BD9B50E2-C2A2-415E-B747-3440B4DA5E90}.Debug|x64.Build.0 = Debug|x64
+		{BD9B50E2-C2A2-415E-B747-3440B4DA5E90}.Release|x64.ActiveCfg = Release|x64
+		{BD9B50E2-C2A2-415E-B747-3440B4DA5E90}.Release|x64.Build.0 = Release|x64
+		{1C3973BC-2A8A-43DF-81AC-B66FEB427F41}.Debug|x64.ActiveCfg = Debug|x64
+		{1C3973BC-2A8A-43DF-81AC-B66FEB427F41}.Debug|x64.Build.0 = Debug|x64
+		{1C3973BC-2A8A-43DF-81AC-B66FEB427F41}.Release|x64.ActiveCfg = Release|x64
+		{1C3973BC-2A8A-43DF-81AC-B66FEB427F41}.Release|x64.Build.0 = Release|x64
+		{C739151F-5384-41DF-A1A6-F089E2C1AD56}.Debug|x64.ActiveCfg = Debug|x64
+		{C739151F-5384-41DF-A1A6-F089E2C1AD56}.Debug|x64.Build.0 = Debug|x64
+		{C739151F-5384-41DF-A1A6-F089E2C1AD56}.Release|x64.ActiveCfg = Release|x64
+		{C739151F-5384-41DF-A1A6-F089E2C1AD56}.Release|x64.Build.0 = Release|x64
+		{818753F2-DBB9-4D3B-898A-A604309BE470}.Debug|x64.ActiveCfg = Debug|x64
+		{818753F2-DBB9-4D3B-898A-A604309BE470}.Debug|x64.Build.0 = Debug|x64
+		{818753F2-DBB9-4D3B-898A-A604309BE470}.Release|x64.ActiveCfg = Release|x64
+		{818753F2-DBB9-4D3B-898A-A604309BE470}.Release|x64.Build.0 = Release|x64
+		{7B53D2C7-1B4A-4A53-A7D3-E25B92470B81}.Debug|x64.ActiveCfg = Debug|x64
+		{7B53D2C7-1B4A-4A53-A7D3-E25B92470B81}.Debug|x64.Build.0 = Debug|x64
+		{7B53D2C7-1B4A-4A53-A7D3-E25B92470B81}.Release|x64.ActiveCfg = Release|x64
+		{7B53D2C7-1B4A-4A53-A7D3-E25B92470B81}.Release|x64.Build.0 = Release|x64
+		{05A3FDE7-4DBE-49CA-9390-CBFC702FF32B}.Debug|x64.ActiveCfg = Debug|x64
+		{05A3FDE7-4DBE-49CA-9390-CBFC702FF32B}.Debug|x64.Build.0 = Debug|x64
+		{05A3FDE7-4DBE-49CA-9390-CBFC702FF32B}.Release|x64.ActiveCfg = Release|x64
+		{05A3FDE7-4DBE-49CA-9390-CBFC702FF32B}.Release|x64.Build.0 = Release|x64
+		{430FF7BE-6283-4EB9-8EFB-D50C1AF0DF44}.Debug|x64.ActiveCfg = Debug|x64
+		{430FF7BE-6283-4EB9-8EFB-D50C1AF0DF44}.Debug|x64.Build.0 = Debug|x64
+		{430FF7BE-6283-4EB9-8EFB-D50C1AF0DF44}.Release|x64.ActiveCfg = Release|x64
+		{430FF7BE-6283-4EB9-8EFB-D50C1AF0DF44}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

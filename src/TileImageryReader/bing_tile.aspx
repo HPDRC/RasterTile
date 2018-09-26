@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="bing_tile.aspx.cs" Inherits="TileImageryReader.bing" %>

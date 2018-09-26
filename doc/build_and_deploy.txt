@@ -1,0 +1,39 @@
+1. Use Visual Studio 2012 to open this project
+
+2. Change the configuration to Release or Debug, whichever you want.
+
+3. To enable debug: TileImageryLoader's "Properties" page => "Debug" => "Enable native code debugging"
+
+4. Deploy JSMap to IIS. Use it to view the map.
+	In index.htm, find "var map0 = new tdtMap("mapContainer0", -85.25, -57.5, 11);" and configure the start point
+	In tdtAPI.js, find "this.imgAddress = "http://localhost/TileImageryReader/default.aspx?X="+Tx+"&Y="+Ty+"&L="+L;"
+		and configure the correct URL to TileImageryReader
+
+5. If deploy this program to other machines, must first install:
+    Visual C++ Redistributable for Visual Studio 2012
+    (can be found on http://www.microsoft.com/en-us/download/details.aspx?id=30679)
+
+6. When deploy TileImageryReader to IIS:
+	1. Deploy one reader for each projection (because they connect to different databases)
+	2. IMPORTANT!!! Use one application pool for each reader
+	3. DO NOT use web garden as it brings no benefit
+	4. Apply the following rules to application pool's recycling settings (IIS is unstable when being not recycled for a long time. So keep it recycled for no more than 6 hours is a good idea.)
+		Regular time intervals: 360 (minutes)
+		Fixed number of requests: 100000
+		Private memory usage: 2000000 (KB)
+		Specify Times: 3:00 AM, 6:00 AM
+	5. Apply the following rules to application pool's advanced settings
+		Idle time-out: 60 (minites)
+
+7. Performance advices about TileImageryReader:
+	1. Use local path like D:\TileImageryData\1.data when possible. Avoid using network path like \\mountain.cs.fiu.edu\TileImageryData\1.data
+	2. Use instance name of local sql server in db connection string. So shared memory will be used when connecting to sql server.
+		Otherwise database will be connected as tcp/ip.
+		(When connecting to remote database, tcp/ip has to be used)
+		Example:
+		DB_CONNECTION_STRING = DRIVER={SQL Server Native Client 10.0};SERVER=(local);DATABASE=TileImageryBing;Trusted_Connection=Yes;
+
+8. How to access password protected network files
+	1. Application pool -> Advanced Settings -> Identity -> Custom account -> use any user account, say, "administrator"
+	2. Application pool -> Advanced Settings -> Load user profile -> true
+	3. Credential Manager -> Windows credentials -> add a credential which can access desired network files

@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Common\CConfig.cpp" />
+    <ClCompile Include="Common\CDoqq.cpp" />
+    <ClCompile Include="Common\CFile.cpp" />
+    <ClCompile Include="Common\CHelper.cpp" />
+    <ClCompile Include="Common\CImg.cpp" />
+    <ClCompile Include="Common\CLoggable.cpp" />
+    <ClCompile Include="Common\CMemory.cpp" />
+    <ClCompile Include="Common\CSemaphore.cpp" />
+    <ClCompile Include="Common\CUtilities.cpp" />
+    <ClCompile Include="Common\global_functions.cpp" />
+    <ClCompile Include="FileSystem\CDataFileBuilder.cpp" />
+    <ClCompile Include="FileSystem\CIndexBuilder.cpp" />
+    <ClCompile Include="FileSystem\CMetaFile.cpp" />
+    <ClCompile Include="FileSystem\CSqlConnection.cpp" />
+    <ClCompile Include="FileSystem\CTablePathes.cpp" />
+    <ClCompile Include="FileSystem\CTableQualities.cpp" />
+    <ClCompile Include="FileSystem\CTableTiles.cpp" />
+    <ClCompile Include="Load\CLoader.cpp" />
+    <ClCompile Include="Load\CObjectPool.cpp" />
+    <ClCompile Include="Load\CPyramid.cpp" />
+    <ClCompile Include="Load\CPyramidNode.cpp" />
+    <ClCompile Include="Load\CSource.cpp" />
+    <ClCompile Include="Load\CSourceList.cpp" />
+    <ClCompile Include="Load\CTaskSet.cpp" />
+    <ClCompile Include="Projection\CProjection.cpp" />
+    <ClCompile Include="Projection\CProjectionBing.cpp" />
+    <ClCompile Include="Projection\CProjectionNASA.cpp" />
+    <ClCompile Include="Projection\CProjectionUtm.cpp" />
+    <ClCompile Include="Read\CDBCache.cpp" />
+    <ClCompile Include="Read\CBingReader.cpp" />
+    <ClCompile Include="Read\CReader.cpp" />
+    <ClCompile Include="Read\CTile.cpp" />
+    <ClCompile Include="Read\CUtmReader.cpp" />
+    <ClCompile Include="Read\CWeightRule.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common\CConfig.h" />
+    <ClInclude Include="Common\CDoqq.h" />
+    <ClInclude Include="Common\CFile.h" />
+    <ClInclude Include="Common\CHelper.h" />
+    <ClInclude Include="Common\CImg.h" />
+    <ClInclude Include="Common\CLoggable.h" />
+    <ClInclude Include="Common\CMemory.h" />
+    <ClInclude Include="Common\CSemaphore.h" />
+    <ClInclude Include="Common\CUtilities.h" />
+    <ClInclude Include="Common\global_config.h" />
+    <ClInclude Include="Common\global_defines.h" />
+    <ClInclude Include="Common\global_functions.h" />
+    <ClInclude Include="Common\global_includes.h" />
+    <ClInclude Include="Common\global_structures.h" />
+    <ClInclude Include="FileSystem\CDataFileBuilder.h" />
+    <ClInclude Include="FileSystem\CIndexBuilder.h" />
+    <ClInclude Include="FileSystem\CMetaFile.h" />
+    <ClInclude Include="FileSystem\CSqlConnection.h" />
+    <ClInclude Include="FileSystem\CTablePathes.h" />
+    <ClInclude Include="FileSystem\CTableQualities.h" />
+    <ClInclude Include="FileSystem\CTableTiles.h" />
+    <ClInclude Include="FileSystem\includes.h" />
+    <ClInclude Include="Load\CLoader.h" />
+    <ClInclude Include="Load\CObjectPool.h" />
+    <ClInclude Include="Load\CPyramid.h" />
+    <ClInclude Include="Load\CPyramidNode.h" />
+    <ClInclude Include="Load\CSource.h" />
+    <ClInclude Include="Load\CSourceList.h" />
+    <ClInclude Include="Load\CTaskSet.h" />
+    <ClInclude Include="Load\includes.h" />
+    <ClInclude Include="Projection\CProjection.h" />
+    <ClInclude Include="Projection\CProjectionBing.h" />
+    <ClInclude Include="Projection\CProjectionNASA.h" />
+    <ClInclude Include="Projection\CProjectionUtm.h" />
+    <ClInclude Include="Projection\includes.h" />
+    <ClInclude Include="Read\CDBCache.h" />
+    <ClInclude Include="Read\CBingReader.h" />
+    <ClInclude Include="Read\CReader.h" />
+    <ClInclude Include="Read\CTile.h" />
+    <ClInclude Include="Read\CUtmReader.h" />
+    <ClInclude Include="Read\CWeightRule.h" />
+    <ClInclude Include="Read\includes.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CxImage\cximage.vcxproj">
+      <Project>{c739151f-5384-41df-a1a6-f089e2c1ad56}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LibGeoTiff\LibGeoTiff.vcxproj">
+      <Project>{69120eee-71bc-4f9b-9cd5-e3579a7a34dc}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\libtiff\libtiff.vcxproj">
+      <Project>{ed95ce20-400f-4ee7-ae70-ed1db1141d71}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Proj4\Proj4.vcxproj">
+      <Project>{3267f273-cbe6-407c-bc0c-69e8e0af7705}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1C3973BC-2A8A-43DF-81AC-B66FEB427F41}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>TileImagerySystem</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4996;</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

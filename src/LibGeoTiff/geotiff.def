@@ -1,0 +1,10 @@
+EXPORTS
+	GTIFFree
+	GTIFGetDefn
+	GTIFKeyInfo
+	GTIFKeyGet
+	GTIFKeySet
+	GTIFNew
+	GTIFWriteKeys
+	XTIFFClose
+	XTIFFOpen

@@ -1,0 +1,185 @@
+-------- Copy table origins -------
+1. run:
+exec sp_configure 'show advanced options',1
+reconfigure;
+exec sp_configure 'Ad Hoc Distributed Queries',1
+reconfigure;
+
+2. run:
+SET IDENTITY_INSERT origins ON;
+
+insert into origins(id, name)
+SELECT * FROM
+OPENDATASOURCE('SQLOLEDB', 'Data Source=localhost;Trusted_Connection=Yes;').SOURCE_DATABASE_NAME.dbo.origins;
+
+SET IDENTITY_INSERT origins OFF;
+
+exec sp_configure 'Ad Hoc Distributed Queries',0
+reconfigure;
+exec sp_configure 'show advanced options',0
+reconfigure;
+
+-------- Create tables -------
+/****** Object:  Table [dbo].[weight_rules]    Script Date: 04/24/2014 10:53:55 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[weight_rules](
+	[origin_id] [int] NOT NULL,
+	[z_min] [tinyint] NOT NULL,
+	[z_max] [tinyint] NOT NULL,
+	[weight] [int] NOT NULL
+) ON [PRIMARY]
+GO
+CREATE NONCLUSTERED INDEX [IX_originId_z] ON [dbo].[weight_rules] 
+(
+	[origin_id] ASC,
+	[z_min] ASC,
+	[z_max] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[tiles]    Script Date: 04/24/2014 10:53:55 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[tiles](
+	[id] [bigint] IDENTITY(1,1) NOT NULL,
+	[path_id] [int] NOT NULL,
+	[x] [int] NOT NULL,
+	[y] [int] NOT NULL,
+	[z] [tinyint] NOT NULL,
+	[img_offset] [int] NOT NULL,
+	[img_length] [int] NOT NULL,
+	[date] [int] NOT NULL,
+	[origin_id] [int] NOT NULL,
+	[zone] [int] NOT NULL,
+ CONSTRAINT [PK_tiles] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+CREATE NONCLUSTERED INDEX [IX_xyz_zone] ON [dbo].[tiles] 
+(
+	[x] ASC,
+	[y] ASC,
+	[z] ASC,
+	[zone] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[qualities]    Script Date: 04/24/2014 10:53:55 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[qualities](
+	[tile_id] [bigint] NOT NULL,
+	[grid_completeness] [int] NOT NULL,
+ CONSTRAINT [PK_qualities] PRIMARY KEY CLUSTERED 
+(
+	[tile_id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[pathes]    Script Date: 04/24/2014 10:53:55 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[pathes](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[path] [varchar](256) NOT NULL,
+ CONSTRAINT [IX_pathes] UNIQUE NONCLUSTERED 
+(
+	[path] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[origins]    Script Date: 04/24/2014 10:53:55 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[origins](
+	[id] [smallint] IDENTITY(1,1) NOT NULL,
+	[name] [varchar](20) NOT NULL,
+ CONSTRAINT [IX_origins] UNIQUE NONCLUSTERED 
+(
+	[name] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+
+
+
+----------- Write data into table origins -----------
+truncate table origins;
+insert into origins(name) values('AIRPHOTO_C');
+insert into origins(name) values('AIRPHOTO2FT');
+insert into origins(name) values('COUNTY_1FT');
+insert into origins(name) values('COUNTY_1M');
+insert into origins(name) values('COUNTY_2FT');
+insert into origins(name) values('COUNTY_3INCH');
+insert into origins(name) values('COUNTY_6INCH');
+insert into origins(name) values('COUNTY_CIR_30CM');
+insert into origins(name) values('COUNTY_CLR_10CM');
+insert into origins(name) values('COUNTY_CLR_30CM');
+insert into origins(name) values('DOR_1FT');
+insert into origins(name) values('GEOEYE-1_CLR_1M');
+insert into origins(name) values('GEOEYE-1_CLR_50CM');
+insert into origins(name) values('IKONOS_1M');
+insert into origins(name) values('IKONOS_2001');
+insert into origins(name) values('IKONOS_4M');
+insert into origins(name) values('IKONOS_BW_1M');
+insert into origins(name) values('IKONOS_C');
+insert into origins(name) values('IKONOS_GEOEYE-1_1M');
+insert into origins(name) values('IKONOS-1_0.5M');
+insert into origins(name) values('KOMPSAT-2_CIR_1M');
+insert into origins(name) values('LANDSAT7_321');
+insert into origins(name) values('LANDSAT7_321_28.5M');
+insert into origins(name) values('LANDSAT7_432');
+insert into origins(name) values('LANDSAT7_432_28.5M');
+insert into origins(name) values('LANDSAT7_742');
+insert into origins(name) values('LANDSAT7_PS_C');
+insert into origins(name) values('NAIP_1M');
+insert into origins(name) values('SPOT_CIR_2.5M');
+insert into origins(name) values('SRTM');
+insert into origins(name) values('USGS_15CM');
+insert into origins(name) values('USGS_1FT_CITIES');
+insert into origins(name) values('USGS_1M');
+insert into origins(name) values('USGS_20CM');
+insert into origins(name) values('USGS_30CM');
+insert into origins(name) values('USGS_65CM');
+insert into origins(name) values('USGS_75CM');
+insert into origins(name) values('USGS_AP_BW');
+insert into origins(name) values('USGS_AP_CIR');
+insert into origins(name) values('USGS_BW_15CM');
+insert into origins(name) values('USGS_BW_30CM');
+insert into origins(name) values('WV01_BW_50CM');
+insert into origins(name) values('WV02_50CM');
+insert into origins(name) values('BMNG');
+insert into origins(name) values('USGS_BW_3INCH');
+insert into origins(name) values('USGS_60CM');
+insert into origins(name) values('I3');
+insert into origins(name) values('TRILLIUM');
+insert into origins(name) values('COUNTY_CIR_1FT');
+
+----------- Write data into table weight_rules -----------
+--- !!! these rules only works for bing projection !!! ---
+truncate table weight_rules;
+insert into weight_rules values(44,0,7,10);
+insert into weight_rules values(44,8,30,-10);
+insert into weight_rules values(28,8,12,10);
+insert into weight_rules values(47,8,12,15);
+insert into weight_rules values(48,13,30,20);
+insert into weight_rules values(49,0,30,-99);

@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="bing_mosaic_fixed.aspx.cs" Inherits="TileImageryReader.bing_mosaic_fixed" %>

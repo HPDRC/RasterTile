@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{8be4364c-433f-4d9c-a286-8007bdcc16da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FileSystem">
+      <UniqueIdentifier>{c9a45096-1a44-4791-8d60-36487dea4f22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Load">
+      <UniqueIdentifier>{1703051c-980d-49de-ae4c-9cb0663c6ab7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Read">
+      <UniqueIdentifier>{cce06e37-6574-4cf0-b7ac-e604fdd95492}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Projection">
+      <UniqueIdentifier>{f01b2ac9-956c-481d-b9a8-b7796e2027a3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Common\CConfig.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\CDoqq.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\CFile.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\CHelper.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\CImg.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\CLoggable.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\CMemory.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\CSemaphore.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\CUtilities.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\global_functions.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem\CDataFileBuilder.cpp">
+      <Filter>FileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem\CIndexBuilder.cpp">
+      <Filter>FileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem\CMetaFile.cpp">
+      <Filter>FileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem\CSqlConnection.cpp">
+      <Filter>FileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem\CTablePathes.cpp">
+      <Filter>FileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem\CTableQualities.cpp">
+      <Filter>FileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem\CTableTiles.cpp">
+      <Filter>FileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Load\CLoader.cpp">
+      <Filter>Load</Filter>
+    </ClCompile>
+    <ClCompile Include="Load\CObjectPool.cpp">
+      <Filter>Load</Filter>
+    </ClCompile>
+    <ClCompile Include="Load\CPyramid.cpp">
+      <Filter>Load</Filter>
+    </ClCompile>
+    <ClCompile Include="Load\CPyramidNode.cpp">
+      <Filter>Load</Filter>
+    </ClCompile>
+    <ClCompile Include="Load\CSource.cpp">
+      <Filter>Load</Filter>
+    </ClCompile>
+    <ClCompile Include="Load\CSourceList.cpp">
+      <Filter>Load</Filter>
+    </ClCompile>
+    <ClCompile Include="Load\CTaskSet.cpp">
+      <Filter>Load</Filter>
+    </ClCompile>
+    <ClCompile Include="Read\CDBCache.cpp">
+      <Filter>Read</Filter>
+    </ClCompile>
+    <ClCompile Include="Read\CUtmReader.cpp">
+      <Filter>Read</Filter>
+    </ClCompile>
+    <ClCompile Include="Projection\CProjection.cpp">
+      <Filter>Projection</Filter>
+    </ClCompile>
+    <ClCompile Include="Projection\CProjectionNASA.cpp">
+      <Filter>Projection</Filter>
+    </ClCompile>
+    <ClCompile Include="Projection\CProjectionUtm.cpp">
+      <Filter>Projection</Filter>
+    </ClCompile>
+    <ClCompile Include="Projection\CProjectionBing.cpp">
+      <Filter>Projection</Filter>
+    </ClCompile>
+    <ClCompile Include="Read\CReader.cpp">
+      <Filter>Read</Filter>
+    </ClCompile>
+    <ClCompile Include="Read\CWeightRule.cpp">
+      <Filter>Read</Filter>
+    </ClCompile>
+    <ClCompile Include="Read\CTile.cpp">
+      <Filter>Read</Filter>
+    </ClCompile>
+    <ClCompile Include="Read\CBingReader.cpp">
+      <Filter>Read</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common\global_structures.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\CConfig.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\CDoqq.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\CFile.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\CHelper.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\CImg.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\CLoggable.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\CMemory.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\CSemaphore.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\CUtilities.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\global_config.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\global_defines.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\global_functions.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\global_includes.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem\CDataFileBuilder.h">
+      <Filter>FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem\CIndexBuilder.h">
+      <Filter>FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem\CMetaFile.h">
+      <Filter>FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem\CSqlConnection.h">
+      <Filter>FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem\CTablePathes.h">
+      <Filter>FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem\CTableQualities.h">
+      <Filter>FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem\CTableTiles.h">
+      <Filter>FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem\includes.h">
+      <Filter>FileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Load\CLoader.h">
+      <Filter>Load</Filter>
+    </ClInclude>
+    <ClInclude Include="Load\CObjectPool.h">
+      <Filter>Load</Filter>
+    </ClInclude>
+    <ClInclude Include="Load\CPyramid.h">
+      <Filter>Load</Filter>
+    </ClInclude>
+    <ClInclude Include="Load\CPyramidNode.h">
+      <Filter>Load</Filter>
+    </ClInclude>
+    <ClInclude Include="Load\CSource.h">
+      <Filter>Load</Filter>
+    </ClInclude>
+    <ClInclude Include="Load\CSourceList.h">
+      <Filter>Load</Filter>
+    </ClInclude>
+    <ClInclude Include="Load\CTaskSet.h">
+      <Filter>Load</Filter>
+    </ClInclude>
+    <ClInclude Include="Load\includes.h">
+      <Filter>Load</Filter>
+    </ClInclude>
+    <ClInclude Include="Read\CDBCache.h">
+      <Filter>Read</Filter>
+    </ClInclude>
+    <ClInclude Include="Read\CUtmReader.h">
+      <Filter>Read</Filter>
+    </ClInclude>
+    <ClInclude Include="Read\includes.h">
+      <Filter>Read</Filter>
+    </ClInclude>
+    <ClInclude Include="Projection\CProjection.h">
+      <Filter>Projection</Filter>
+    </ClInclude>
+    <ClInclude Include="Projection\CProjectionNASA.h">
+      <Filter>Projection</Filter>
+    </ClInclude>
+    <ClInclude Include="Projection\CProjectionUtm.h">
+      <Filter>Projection</Filter>
+    </ClInclude>
+    <ClInclude Include="Projection\CProjectionBing.h">
+      <Filter>Projection</Filter>
+    </ClInclude>
+    <ClInclude Include="Read\CReader.h">
+      <Filter>Read</Filter>
+    </ClInclude>
+    <ClInclude Include="Read\CWeightRule.h">
+      <Filter>Read</Filter>
+    </ClInclude>
+    <ClInclude Include="Projection\includes.h">
+      <Filter>Projection</Filter>
+    </ClInclude>
+    <ClInclude Include="Read\CTile.h">
+      <Filter>Read</Filter>
+    </ClInclude>
+    <ClInclude Include="Read\CBingReader.h">
+      <Filter>Read</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

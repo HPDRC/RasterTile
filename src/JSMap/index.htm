@@ -1,0 +1,113 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>
+		Simple Map Demo
+	</title>
+	<!-- tdt API -->
+	<script type="text/javascript" src="tdtAPI.js"></script>
+	<link rel="stylesheet" type="text/css" href="tdtAPI.css" />
+</head>
+<body>
+	<!-- 控制台 -->
+	<p>
+		经度(-180~180)<input type="text" id="txt_lng" style="width:100px"/>
+		纬度(-90~90)<input type="text" id="txt_lat" style="width:100px"/>
+		缩放层次(2~18)<input type="text" id="txt_zoom" style="width:50px"/>
+		<input type="button" id="btn_goto" value="去往" onclick="GotoCoordinate()"/>
+		<br />
+		<input type="button" id="btn_goE" value="向东" onclick="GoEast()"/>
+		<input type="button" id="btn_goW" value="向西" onclick="GoWest()"/>
+		|
+		<input type="button" id="btn_goN" value="向北" onclick="GoNorth()"/>
+		<input type="button" id="btn_goS" value="向南" onclick="GoSouth()"/>
+		|
+		<input type="button" id="btn_zoomIn" value="+" onclick="ZoomIn()"/>
+		<input type="button" id="btn_zoomOut" value="-" onclick="ZoomOut()"/>
+		|
+		<input type="button" id="btn_vector" value="矢量" onclick="VectorMap()"/>
+		<input type="button" id="btn_image" value="影像" onclick="ImageMap()"/>
+		|
+		<input type="checkbox" id="ckb_debug" checked="true" onclick="CheckDebug()">记录鼠标按下事件
+	</p>
+	<!-- 地图容器 -->
+	<div id="mapContainer0" class="tdtMap" style="width:800px; height:600px"></div>
+	<!-- Debug容器，用来随便写些与API无关的东西 -->
+	<div id="debug" style="width:800px"></div>
+	<!-- 控制代码 -->
+	<script type="text/javascript">
+		//用户创建地图
+		var map0 = new tdtMap("mapContainer0", -85.25, -57.5, 11);
+		
+		//注册鼠标事件
+		map0.AddEventListener(map0.MouseEvent.MOUSE_DOWN, onMouseDownHandler);
+		map0.AddEventListener(map0.MouseEvent.MOUSE_DOWN, onMouseDownRecorder);
+		map0.AddEventListener(map0.MouseEvent.MOUSE_UP, onMouseUpHandler);
+		map0.AddEventListener(map0.MouseEvent.MOUSE_DOUBLE_CLICK, onMouseDoubleClickHandler);
+		//UI事件处理，用来演示 添加/删除 鼠标事件的方法
+		
+		function CheckDebug(){
+			if(document.getElementById("ckb_debug").checked){
+				map0.AddEventListener(map0.MouseEvent.MOUSE_DOWN, onMouseDownRecorder);
+			}
+			else{
+				map0.RemoveEventListener(map0.MouseEvent.MOUSE_DOWN, onMouseDownRecorder);
+			}
+		}
+		
+		//鼠标事件处理
+		function onMouseDownHandler( e ){
+			map0.StartDrag();
+		}
+		
+		function onMouseUpHandler( e ){
+			map0.StopDrag();
+		}
+		
+		function onMouseDownRecorder( e ){
+			//演示e的用法1
+			document.getElementById("debug").innerHTML += ("鼠标按下: X="+e.X+" Y="+e.Y+" 经度="+e.longitude+" 纬度="+e.latitude+"<br />");
+		}
+		
+		function onMouseDoubleClickHandler( e ){
+			//演示e的用法2
+			map0.SetMapCenter(e.longitude, e.latitude, (map0.GetLevel()+1) );
+		}
+		//用户将地图放置在特定坐标，并设定缩放层次
+		function GotoCoordinate(){
+			map0.SetMapCenter(parseInt(txt_lng.value), parseInt(txt_lat.value), parseInt(txt_zoom.value));
+		}
+		
+		//用户平移
+		function GoEast(){
+			map0.MoveOffset(50,0);
+		}
+		function GoWest(){
+			map0.MoveOffset(-50,0);
+		}
+		function GoNorth(){
+			map0.MoveOffset(0,-50);
+		}
+		function GoSouth(){
+			map0.MoveOffset(0,50);
+		}
+		
+		//用户缩放
+		function ZoomIn(){
+			map0.ZoomTo(map0.GetLevel() + 1);		
+		}
+		function ZoomOut(){
+			map0.ZoomTo(map0.GetLevel() - 1);		
+		}
+		
+		//选择地图类型
+		function VectorMap(){
+			map0.SetMapType(map0.MapType.VECTOR);
+		}
+		
+		function ImageMap(){
+			map0.SetMapType(map0.MapType.IMAGE);
+		}
+		
+		
+	</script>
+</body>

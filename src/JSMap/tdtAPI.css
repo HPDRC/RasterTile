@@ -1,0 +1,23 @@
+div.tdtMap
+{
+	z-index: 0;
+	background: lightblue;
+	overflow:hidden;
+	border: #000 1px solid;
+}
+
+div.tdtTileContainer
+{
+	z-index: 0;
+	position:absolute;
+	overflow:hidden;
+}
+
+div.tdtPanelContainer
+{
+	z-index: 0;
+	position:absolute;
+	overflow:hidden;
+	font-size: 12px;
+	font-family: Arial;
+}
