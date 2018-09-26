@@ -30,3 +30,7 @@ Please refer to doc/build_and_deploy.md
 ## User's Guide
 
 To be completed.
+
+## Libraries used in this project
+
+To be completed.
